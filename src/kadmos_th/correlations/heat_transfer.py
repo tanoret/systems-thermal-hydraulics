@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import math
 
+### TODO: Mauricio to implement heat transfer correlations
+
 
 def htc_dittus_boelter(G: float, D: float, mu: float, cp: float, k: float, n: float = 0.4) -> float:
     """Single-phase turbulent internal convection (Dittus–Boelter).
@@ -44,6 +46,7 @@ def htc_dittus_boelter(G: float, D: float, mu: float, cp: float, k: float, n: fl
 
 # Placeholders for future validated 2-phase HTC correlations.
 # Intentionally not used in solver equations in v0.2; these are utilities for post-processing.
+# Do Gnielinski and pick conservative (lower)
 def htc_two_phase_placeholder() -> float:
     """Placeholder for two-phase HTC correlations (flow boiling/condensation)."""
     raise NotImplementedError(
