@@ -1,0 +1,37 @@
+# Version control
+.git
+.gitignore
+
+# Python byte-code and caches
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.mypy_cache
+.ruff_cache
+.pytest_cache
+
+# Virtual environments
+.venv
+venv
+env
+
+# Development / IDE artefacts
+.vscode
+.idea
+*.egg-info
+dist
+build
+
+# Test output
+.coverage
+htmlcov
+tests/__pycache__
+
+# macOS metadata
+.DS_Store
+
+# Secrets / local config (never bake these into the image)
+.env
+*.env
+secrets.toml

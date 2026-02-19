@@ -1,0 +1,24 @@
+[server]
+# Required for headless / container deployments (Streamlit Cloud, Docker, Heroku …)
+headless = true
+# Allow connections from any host; the reverse proxy / platform handles TLS.
+address = "0.0.0.0"
+# Default port — override with $PORT env var in Procfile / Docker CMD when needed.
+port = 8501
+# Disable the file-watcher in production (saves RAM, avoids inotify limits).
+runOnSave = false
+enableCORS = false
+enableXsrfProtection = true
+
+[browser]
+# Suppress the "Please wait…" open-browser call on headless deployments.
+serverAddress = "0.0.0.0"
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor      = "#1f77b4"   # Plotly default blue — matches chart palette
+backgroundColor   = "#ffffff"
+secondaryBackgroundColor = "#f0f4f8"
+textColor         = "#1a1a2e"
+font = "sans serif"

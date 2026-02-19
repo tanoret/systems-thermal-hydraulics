@@ -1,0 +1,9 @@
+# Root requirements.txt — used by Streamlit Community Cloud and pip-based CI.
+# The kadmos_th solver lives in src/ and is imported via sys.path in
+# streamlit_app/network_builder.py, so no pip install of the local package is needed.
+
+streamlit>=1.35
+plotly>=5.20
+pandas>=2.0
+numpy>=1.23
+iapws>=1.5.4
