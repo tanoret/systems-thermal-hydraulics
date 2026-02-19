@@ -1,7 +1,7 @@
 """
 network_builder.py
 ------------------
-Builds the venturi-recirculation kadmos_th Network from a flat parameter
+Builds the venturi-recirculation systems_th Network from a flat parameter
 dictionary and exposes helpers for extracting post-solve state data.
 """
 
@@ -22,13 +22,13 @@ _SRC = Path(__file__).resolve().parent.parent / "src"
 if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
-from kadmos_th import Network
-from kadmos_th.components import (
+from systems_th import Network
+from systems_th.components import (
     Pipe, CoreChannel, OrificePlate, Separator,
     Turbine, Condenser, Pump, Heater, Mixer,
 )
-from kadmos_th.solver import SolveOptions, SolveResult
-from kadmos_th.props import WaterIAPWS
+from systems_th.solver import SolveOptions, SolveResult
+from systems_th.props import WaterIAPWS
 
 # ── station sequence (label, connection key, branch) ──────────────────────────
 STATION_SEQUENCE: list[tuple[str, str, str]] = [

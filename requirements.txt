@@ -1,5 +1,5 @@
 # Root requirements.txt — used by Streamlit Community Cloud and pip-based CI.
-# The kadmos_th solver lives in src/ and is imported via sys.path in
+# The systems_th solver lives in src/ and is imported via sys.path in
 # streamlit_app/network_builder.py, so no pip install of the local package is needed.
 
 streamlit>=1.35

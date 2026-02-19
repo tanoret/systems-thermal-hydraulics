@@ -1,5 +1,5 @@
 """
-app.py — kadmos-TH Streamlit GUI
+app.py — systems-TH Streamlit GUI
 ---------------------------------
 Run with:
     cd streamlit_app
@@ -20,7 +20,7 @@ import streamlit as st
 # ── path setup ────────────────────────────────────────────────────────────────
 _ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(_ROOT))                        # for network_builder / plotting
-sys.path.insert(0, str(_ROOT.parent / "src"))         # for kadmos_th
+sys.path.insert(0, str(_ROOT.parent / "src"))         # for systems_th
 
 from network_builder import (
     default_params, build_and_solve,
@@ -36,7 +36,7 @@ from plotting import (
 
 # ── page setup ────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="kadmos-TH · Reactor TH Solver",
+    page_title="systems-TH · Reactor TH Solver",
     page_icon="⚛️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -60,7 +60,7 @@ p = st.session_state.params   # mutable shorthand
 #  SIDEBAR – operating point + solver controls
 # ══════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown("## ⚛️ kadmos-TH")
+    st.markdown("## ⚛️ systems-TH")
     st.caption("Steady-state BWR-like loop · IAPWS-97")
     st.divider()
 
@@ -328,7 +328,7 @@ with tab_dash:
         csv = states.to_csv(index=False).encode()
         st.download_button(
             "⬇️ Download full state table (CSV)",
-            data=csv, file_name="kadmos_th_states.csv", mime="text/csv",
+            data=csv, file_name="systems_th_states.csv", mime="text/csv",
         )
 
 # ─────────────────────────────────────────────────────────────────────────────

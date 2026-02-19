@@ -1,7 +1,7 @@
 """
 plotting.py
 -----------
-Plotly chart builders for the kadmos-TH Streamlit GUI.
+Plotly chart builders for the systems-TH Streamlit GUI.
 All functions accept post-solve data and return go.Figure objects.
 """
 

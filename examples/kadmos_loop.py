@@ -4,9 +4,9 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from kadmos_th import Network
-from kadmos_th.components import Pipe, CoreChannel, OrificePlate, Separator, Turbine, Condenser, Pump, Heater, Mixer
-from kadmos_th.solver import SolveOptions
+from systems_th import Network
+from systems_th.components import Pipe, CoreChannel, OrificePlate, Separator, Turbine, Condenser, Pump, Heater, Mixer
+from systems_th.solver import SolveOptions
 
 
 def main():
